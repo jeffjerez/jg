@@ -13,7 +13,8 @@
         }
         .container {
             display: flex;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
         }
         .left-panel {
             flex: 1;
@@ -28,6 +29,10 @@
             background-image: url('images/td_right2.jpg');
             background-size: cover;
             background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         h1 {
             color: #261b43;
@@ -49,13 +54,16 @@
         }
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 20px 40px;
             background-color: #f5bb9a;
             color: white;
             text-align: center;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 8px;
             transition: background-color 0.3s;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .btn:hover {
             background-color: #f6ddc6;
@@ -71,16 +79,30 @@
             margin-left: 20px;
         }
         footer {
-            bottom: 20px;
-            left: 20px;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
             font-size: 15px;
             font-family: serif;
             color: #999;
-            position: absolute;
         }
         footer a, footer a:visited {
             color: #261b43;
             text-decoration: none;
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                height: 100vh;
+            }
+            .right-panel {
+                flex: 1;
+            }
+        }
+        @media (max-width: 767px) {
+            .right-panel {
+                min-height: 300px;
+            }
         }
     </style>
 </head>
@@ -90,10 +112,11 @@
             <h1>our first chapter</h1>
             <p>On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead of a traditional registry, we're inviting our loved ones to contribute to our future. Your support will help us plant the seeds for our first home and other early milestones.</p>
             <p>If you'd like to join us in this journey, any contribution is appreciated.</p>
-            <a href="https://account.venmo.com/u/gabby-and-jeffrey" class="btn">Give Here</a>
             <p><span class="ty">thank you</span></strong> for being part of this exciting time in our lives! your love and support means the world to us.</p>
         </div>
-        <div class="right-panel"></div>
+        <div class="right-panel">
+            <a href="https://account.venmo.com/u/gabby-and-jeffrey" class="btn">Give Here</a>
+        </div>
     </div>
     <nav>
         <a href="#">Home</a>
