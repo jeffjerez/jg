@@ -31,13 +31,29 @@
             background-position: center;
             position: relative;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: 50px;
+        }
+        .right-panel::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 1;
+        }
+        .right-panel > * {
+            position: relative;
+            z-index: 2;
         }
         h1 {
             color: #261b43;
             font-family: 'Times New Roman', serif;
-            font-size: 48px;
+            font-size: 40px;
             margin-bottom: 20px;
         }
         p {
@@ -55,7 +71,7 @@
         .btn {
             display: inline-block;
             padding: 20px 40px;
-            background-color: #f5bb9a;
+            background-color: #5c4692;
             color: white;
             text-align: center;
             text-decoration: none;
@@ -66,7 +82,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .btn:hover {
-            background-color: #f6ddc6;
+            background-color: #f5bb9a;
         }
         nav {
             position: absolute;
@@ -79,7 +95,7 @@
             margin-left: 20px;
         }
         footer {
-            position: fixed;
+            position: absolute;
             bottom: 10px;
             left: 10px;
             font-size: 15px;
@@ -98,24 +114,44 @@
             .right-panel {
                 flex: 1;
             }
+            .mobile-only {
+                display: none;
+            }
         }
         @media (max-width: 767px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-panel {
+                display: none;
+            }
             .right-panel {
-                min-height: 300px;
+                min-height: 100vh;
+            }        
+            .right-panel::before {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+            .desktop-only {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-panel">
+        <div class="left-panel desktop-only">
             <h1>our first chapter</h1>
             <p>On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead of a traditional registry, we're inviting our loved ones to contribute to our future. Your support will help us plant the seeds for our first home and other early milestones.</p>
             <p>If you'd like to join us in this journey, any contribution is appreciated.</p>
-            <p><span class="ty">thank you</span></strong> for being part of this exciting time in our lives! your love and support means the world to us.</p>
+            <p><span class="ty">thank you</span> for being part of this exciting time in our lives! your love and support means the world to us.</p>
         </div>
         <div class="right-panel">
+            <h1 class="mobile-only">our first chapter</h1>
+            <p class="mobile-only">On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead of a traditional registry, we're inviting our loved ones to contribute to our future. Your support will help us plant the seeds for our first home and other early milestones.</p>
+            <p class="mobile-only">If you'd like to join us in this journey, any contribution is appreciated.</p>
             <a href="https://account.venmo.com/u/gabby-and-jeffrey" class="btn">Give Here</a>
+            <p class="mobile-only"><span class="ty">thank you</span> for being part of this exciting time in our lives! your love and support means the world to us.</p>
         </div>
     </div>
     <nav>
