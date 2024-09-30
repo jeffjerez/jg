@@ -54,6 +54,7 @@
             z-index: 2;
         }
         h1 {
+            padding-top: 100px;
             color: #261b43;
             font-family: 'Times New Roman', serif;
             font-size: 40px;
@@ -102,7 +103,7 @@
         @media (min-width: 768px) {
             .container {
                 flex-direction: row;
-                height: 100vh;
+                height: 100%;
             }
             .right-panel {
                 flex: 1;
@@ -113,20 +114,22 @@
             }
         }
         @media (max-width: 767px) {
+            body, html {
+                overflow-y: auto;
+            }
             .container {
                 flex-direction: column;
+                min-height: 100vh;
             }
             .left-panel {
                 display: none;
             }
             .right-panel {
-                height: 100vh;
-                overflow-y: none;
+                min-height: 100vh;
+                overflow-y: auto;
             }        
             .right-panel::before {
-                height: 100vh;
                 position: fixed;
-                overflow-y: auto;
                 background-color: rgba(255, 255, 255, 0.8);
             }
             .desktop-only {
