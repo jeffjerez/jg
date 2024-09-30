@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/td_pizza.ico">
     <title>Gabby & Jeffrey</title>
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             color: #333;
             height: 100%;
-            overflow: hidden;
         }
+
         .container {
             display: flex;
             flex-direction: column;
-            min-height: 100%;
+            min-height: 100vh;
         }
+
         .left-panel {
             flex: 1;
             padding: 50px;
@@ -27,6 +30,7 @@
             flex-direction: column;
             justify-content: center;
         }
+
         .right-panel {
             flex: 1;
             background-image: url('images/td_right3.jpg');
@@ -38,12 +42,13 @@
             justify-content: center;
             align-items: center;
             padding: 50px;
-            overflow-y: auto;
         }
-        .right-panel > * {
+
+        .right-panel>* {
             position: relative;
             z-index: 2;
         }
+
         h1 {
             margin-top: 10%;
             color: #261b43;
@@ -51,11 +56,13 @@
             font-size: 40px;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 30px;
         }
+
         .ty {
             color: #261b43;
             font-family: 'Times New Roman', serif;
@@ -63,6 +70,7 @@
             font-weight: bold;
             margin-bottom: 20px;
         }
+
         .btn {
             display: inline-block;
             padding: 20px 40px;
@@ -76,9 +84,11 @@
             font-weight: bold;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .btn:hover {
             background-color: #f5bb9a;
         }
+
         .footer {
             bottom: 10px;
             left: 10px;
@@ -86,51 +96,67 @@
             font-family: serif;
             color: #999;
         }
-        .footer a, .footer a:visited {
+
+        .footer a,
+        .footer a:visited {
             color: rgba(138, 90, 160, 0.8);
             text-decoration: none;
         }
+
         @media (min-width: 768px) {
             .container {
                 flex-direction: row;
                 height: 100%;
             }
+
             .right-panel {
                 flex: 1;
                 overflow-y: auto;
             }
+
             .mobile-only {
                 display: none;
             }
         }
+
         @media (max-width: 767px) {
-            body, html {
+
+            body,
+            html {
+                height: auto
                 overflow-y: auto;
             }
+
             .container {
                 flex-direction: column;
-                min-height: 100vh;
+                min-height: 100%;
             }
+
             .left-panel {
                 display: none;
             }
+
             .right-panel {
                 min-height: 100vh;
-                overflow-y: auto;
             }
+
             .desktop-only {
                 display: none;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="left-panel desktop-only">
             <h1>our first chapter</h1>
-            <p>On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead of a traditional registry, we're inviting our loved ones to contribute to our future. Your support will help us plant the seeds for our first home and other early milestones.</p>
+            <p>On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead of a traditional
+                registry, we're inviting our loved ones to contribute to our future. Your support will help us plant the
+                seeds for our first home and other early milestones.</p>
             <p>If you'd like to join us in this journey, any contribution is appreciated.</p>
-            <p><span class="ty">thank you</span> for being part of this exciting time in our lives! your love and support means the world to us.</p>
+            <p><span class="ty">thank you</span> for being part of this exciting time in our lives! your love and
+                support means the world to us.</p>
             <p>- gabby and jeffrey 💜</p>
             <p class="footer">
                 <a href="https://www.tortoisedesigns.co/">graphics by Tortoise Designs</a>
@@ -138,15 +164,19 @@
         </div>
         <div class="right-panel">
             <h1 class="mobile-only">our first chapter</h1>
-            <p class="mobile-only">On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead of a traditional registry, we're inviting our loved ones to contribute to our future. Your support will help us plant the seeds for our first home and other early milestones.</p>
+            <p class="mobile-only">On <strong>October 15, 2024</strong>, our wonderful journey together begins. Instead
+                of a traditional registry, we're inviting our loved ones to contribute to our future. Your support will
+                help us plant the seeds for our first home and other early milestones.</p>
             <p class="mobile-only">If you'd like to join us in this journey, any contribution is appreciated.</p>
             <a href="https://account.venmo.com/u/gabby-and-jeffrey" class="btn">Give Here</a>
-            <p class="mobile-only"><span class="ty">thank you</span> for being part of this exciting time in our lives! your love and support means the world to us.</p>
+            <p class="mobile-only"><span class="ty">thank you</span> for being part of this exciting time in our lives!
+                your love and support means the world to us.</p>
             <p class="mobile-only">- gabby and jeffrey 💜</p>
             <p class="footer mobile-only">
-                <a href="https://www.tortoisedesigns.co/">graphics by <strong>Tortoise Designs</strong></a>
+                <a href="https://www.tortoisedesigns.co/">Graphics by <strong>Tortoise Designs</strong></a>
             </p>
         </div>
     </div>
 </body>
+
 </html>
