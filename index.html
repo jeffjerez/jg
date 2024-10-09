@@ -198,6 +198,19 @@
             </div>
         </div>
     </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const images = document.querySelectorAll('img[src="images/us.png"]');
+        const randomValue = Math.random();
+        
+        if (randomValue > 0.75) {
+            images.forEach(img => {
+                img.src = "images/td_us3.png";
+            });
+        }
+    });
+</script>
 </body>
 
 </html>
