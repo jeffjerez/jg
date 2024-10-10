@@ -37,12 +37,20 @@
             background-image: url('images/td_right3.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             position: relative;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 50px;
+            overflow-y: auto;
+        }
+
+        .right-panel-content {
+            max-width: 100%;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .right-panel>* {
@@ -134,7 +142,6 @@
 
             .right-panel {
                 flex: 1;
-                overflow-y: auto;
             }
 
             .mobile-only {
@@ -207,18 +214,20 @@
             </div>
         </div>
         <div class="right-panel">
-            <img class="mobile-only" src="images/us.png" alt="i love you">
-            <h1 class="mobile-only" id="titleMobile">our first chapter</h1>
-            <p class="mobile-only"><strong id="dateMobile">October 15<sup>th</sup>, 2024</strong> <span id="text1Mobile">marks the day we start writing the rest of our lives together. Instead of a traditional
-                registry, we invite you to help build our future. Each contribution will help us plant the
-                seeds for our first home and other early milestones and memories.</span></p>
-            <p class="mobile-only" id="text2Mobile">If you'd like to join us on this journey, any contribution is appreciated.</p>
-            <a href="https://account.venmo.com/u/gabby-and-jeffrey" class="btn" id="giveBtn">Give Here</a>
-            <p class="mobile-only"><span class="ty" id="thanksMobile">thank you</span> <span id="text3Mobile">for your love, which is truly the greatest gift of all!
-                Your love and support means the world to us.</span></p>
-            <p class="mobile-only" id="signatureMobile">- gabby and jeffrey 💜</p>
-            <div class="footer mobile-only">
-                <a href="https://www.tortoisedesigns.co/"><span id="footerMobile">background graphics by </span><strong>Tortoise Designs</strong></a>
+            <div class="right-panel-content">
+                <img class="mobile-only" src="images/us.png" alt="i love you">
+                <h1 class="mobile-only" id="titleMobile">our first chapter</h1>
+                <p class="mobile-only"><strong id="dateMobile">October 15<sup>th</sup>, 2024</strong> <span id="text1Mobile">marks the day we start writing the rest of our lives together. Instead of a traditional
+                    registry, we invite you to help build our future. Each contribution will help us plant the
+                    seeds for our first home and other early milestones and memories.</span></p>
+                <p class="mobile-only" id="text2Mobile">If you'd like to join us on this journey, any contribution is appreciated.</p>
+                <a href="https://account.venmo.com/u/gabby-and-jeffrey" class="btn" id="giveBtn">Give Here</a>
+                <p class="mobile-only"><span class="ty" id="thanksMobile">thank you</span> <span id="text3Mobile">for your love, which is truly the greatest gift of all!
+                    Your love and support means the world to us.</span></p>
+                <p class="mobile-only" id="signatureMobile">- gabby and jeffrey 💜</p>
+                <div class="footer mobile-only">
+                    <a href="https://www.tortoisedesigns.co/"><span id="footerMobile">background graphics by </span><strong>Tortoise Designs</strong></a>
+                </div>
             </div>
         </div>
     </div>
